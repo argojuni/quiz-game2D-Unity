@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b9c877db0d57f494987ca8d6d1b4f911
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Riangriung
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1d45bf8b0a838a447a248532e44b6171, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

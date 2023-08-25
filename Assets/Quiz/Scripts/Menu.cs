@@ -54,12 +54,11 @@ public class Menu : MonoBehaviour
         starLevel.SetActive(false);
         about.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //start
     }
 
     public void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //PlayerPrefs.DeleteKey("");
+        PlayerPrefs.DeleteAll();
     }
 }

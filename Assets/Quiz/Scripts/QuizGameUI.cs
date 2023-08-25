@@ -10,7 +10,7 @@ public class QuizGameUI : MonoBehaviour
     [SerializeField] private QuizManager quizManager;               //ref to the QuizManager script
     [SerializeField] private CategoryBtnScript categoryBtnPrefab;
     [SerializeField] private GameObject scrollHolder;
-    [SerializeField] private Text scoreText, timerText, highscore;
+    [SerializeField] private Text scoreText, timerText, GameScoreWin, GameScoreLose;
     [SerializeField] private List<Image> lifeImageList;
     [SerializeField] private GameObject gameOverPanel, gameWinPanel, mainMenu, gamePanel;
     [SerializeField] private Sprite correctCol, wrongCol, normalCol, lifeCol; //color of buttons
@@ -44,7 +44,12 @@ public class QuizGameUI : MonoBehaviour
         }
 
         CreateCategoryButtons();
-        highscore.text = PlayerPrefs.GetInt("high", 0).ToString();
+    }
+
+    private void FixedUpdate()
+    {
+        GameScoreWin.text = "Game Complate your Score " + PlayerPrefs.GetInt("high", 0).ToString();
+        GameScoreLose.text = "Game Complate your Score " + PlayerPrefs.GetInt("high", 0).ToString();
     }
     /// <summary>
     /// Method which populate the question on the screen
@@ -228,6 +233,7 @@ public class QuizGameUI : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //SceneManager.LoadScene("MainMenu");
         AudioManager.Instance.PlaySFX("Click");
+        PlayerPrefs.DeleteKey("high");
     }
 
     public void WinButton()
@@ -235,6 +241,7 @@ public class QuizGameUI : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("MainMenu");
         AudioManager.Instance.PlaySFX("Click");
+        PlayerPrefs.DeleteKey("high");
     }
 
 }

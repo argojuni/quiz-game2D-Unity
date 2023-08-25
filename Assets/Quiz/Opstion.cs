@@ -6,14 +6,14 @@ public class Opstion : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     [SerializeField] private GameObject Options;
-    [SerializeField] private GameObject VideoIntro;
+    //[SerializeField] private GameObject VideoIntro;
     [SerializeField] private GameObject AudioMusic;
     private void Start()
     {
         Options.SetActive(false);
-        VideoIntro.SetActive(true);
-        AudioMusic.SetActive(false);
-        StartCoroutine(videoSkip());
+        //VideoIntro.SetActive(true);
+        //AudioMusic.SetActive(false);
+        //StartCoroutine(videoSkip());
     }
     public void OpstionBtn()
     {
@@ -55,10 +55,10 @@ public class Opstion : MonoBehaviour
         GameIsPaused = true;
     }
 
-    IEnumerator videoSkip()
-    {
-        yield return new WaitForSeconds(5);
-        VideoIntro.SetActive(false);
-        AudioMusic.SetActive(true);
-    }
+    //IEnumerator videoSkip()
+    //{
+    //    yield return new WaitForSeconds(5);
+    //    //VideoIntro.SetActive(false);
+    //    AudioMusic.SetActive(true);
+    //}
 }

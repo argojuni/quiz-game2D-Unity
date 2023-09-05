@@ -59,6 +59,6 @@ public class Menu : MonoBehaviour
     public void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("levelIsUnlocked");
     }
 }

@@ -19,6 +19,8 @@ public class QuizGameUI : MonoBehaviour
     [SerializeField] private AudioSource questionAudio;             //audio source for audio clip
     [SerializeField] private Text questionInfoText;                 //text to show question
     [SerializeField] private List<Button> options;                  //options button reference
+
+    public int sceneIndex;
 #pragma warning restore 649
 
     private float audioLength;          //store audio length
@@ -239,7 +241,8 @@ public class QuizGameUI : MonoBehaviour
     public void WinButton()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(sceneIndex);
         AudioManager.Instance.PlaySFX("Click");
         PlayerPrefs.DeleteKey("high");
     }

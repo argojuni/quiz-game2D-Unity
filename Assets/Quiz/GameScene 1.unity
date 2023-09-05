@@ -4141,7 +4141,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1b526a90754517b45a4f3dfa7ee9bebd, type: 2}
   timeInSeconds: 30
   lifesRemaining: 0
-  levelToUnlock: 1
+  levelToUnlock: 2
 --- !u!1 &1991697069
 GameObject:
   m_ObjectHideFlags: 0
@@ -4679,7 +4679,7 @@ MonoBehaviour:
   - {fileID: 505457348}
   - {fileID: 564276197}
   - {fileID: 1005231530}
-  sceneIndex: 2
+  sceneIndex: 3
   am: {fileID: 0}
   reaksi: {fileID: 0}
 --- !u!1 &2071033730
